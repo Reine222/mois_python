@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>PARIER</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet">
+        <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.6/js/mdb.min.js"></script>
+
+    <style>
+    #carte1{
+    height:150px;
+    width:300px;
+    }
+    {% load static %}
+    body{
+    background-image:url("{% static 'parier/img2.jpg' %}");
+    }
+    #conteneur{
+    background-color:silver;
+    }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-dark mdb-color justify-content-between">
+  <a class="navbar-brand" href="#">PARIER</a>
+  <form class="form-inline my-1">
+    <div class="md-form form-sm my-0">
+      <input class="form-control form-control-sm mr-sm-2 mb-0" type="text" placeholder="Search"
+        aria-label="Search">
+    </div>
+    <button class="btn btn-outline-white btn-sm my-0" type="submit">Search</button>
+  </form>
+</nav>
+</header>
+<div id="conteneur" class="container">
+     {% for res in result %}
+    <!-- Card -->
+<div class="card">
+
+  <!-- Card content -->
+
+  <div class="card-body">
+
+    <!-- Title -->
+
+      <center>
+          <h4 class="card-title">{{res.title}}</h4>
+          <hr>
+          <table>
+              <tr><td>{{res.a_desc}}</td></tr>
+              <tr><td><span><i class="far fa-clock"></i></span></td><td>{{res.heure}}</td><td><span> : </span> </td> <td>{{res.eqa}} </td> <td><i class="fas fa-trophy"></i>........ </td> <td>{{res.scors}}</td><td>........<i class="fas fa-trophy"></i></td> <td>{{res.eqb}}</td></tr>
+          </table>
+          <a href="home" class="btn btn-primary">Parier</a>
+          <p></p>
+      </center>
+
+
+
+  </div>
+
+</div>
+    <hr>
+{% endfor %}
+<!-- Card -->
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+  <!-- Footer Elements -->
+  <div  class="container">
+
+    <!--Grid row-->
+    <div class="row">
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-12 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+            {% load static %}
+          <img src="{% static 'parier/img3.jpg' %}" class="img-fluid"
+            alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+            {% load static %}
+          <img src="{% static 'parier/img4.jpg' %}" class="img-fluid"
+            alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+            {% load static %}
+          <img src="{% static 'parier/img5.jpg' %}" class="img-fluid"
+            alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-12 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+            {% load static %}
+          <img src="{% static 'parier/img6.jpg' %}" class="img-fluid"
+            alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+            {% load static %}
+          <img src="{% static 'parier/img7.jpg' %}" class="img-fluid"
+            alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+            {% load static %}
+          <img src="{% static 'parier/img8.jpg' %}" class="img-fluid"
+            alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</body>
+</html>
